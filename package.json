@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-angularjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Laravel Elixir wrapper to manage angularjs source code",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-ng-annotate": "^1.1.0",
-    "laravel-elixir": "^3.1.1"
+    "laravel-elixir": "^4.0.0"
   }
 }
