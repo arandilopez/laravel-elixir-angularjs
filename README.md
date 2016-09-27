@@ -1,3 +1,4 @@
+# Hola a los del taller de git
 # Laravel Elixir for AngularJS
 
 Based on [Hrcc Laravel Elixir Angular](https://github.com/HRcc/laravel-elixir-angular)
