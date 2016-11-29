@@ -23,6 +23,7 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-eslint": "^3.0.1",
+    "gulp-html2js": "^0.4.2",
     "gulp-ng-annotate": "^1.1.0",
     "laravel-elixir": "^4.0.0"
   }
