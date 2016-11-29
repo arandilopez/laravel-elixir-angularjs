@@ -7,15 +7,22 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Arandi López",
-  "keywords": ["laravel", "elixir", "angular", "angularjs", "gulp"],
+  "keywords": [
+    "laravel",
+    "elixir",
+    "angular",
+    "angularjs",
+    "gulp"
+  ],
   "homepage": "https://github.com/arandilopez/laravel-elixir-angularjs",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/arandilopez/laravel-elixir-angularjs"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arandilopez/laravel-elixir-angularjs"
   },
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.9.0",
+    "gulp-eslint": "^3.0.1",
     "gulp-ng-annotate": "^1.1.0",
     "laravel-elixir": "^4.0.0"
   }

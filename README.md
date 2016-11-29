@@ -4,8 +4,8 @@ Based on [Hrcc Laravel Elixir Angular](https://github.com/HRcc/laravel-elixir-an
 
 **This package is just an update of @Hrcc with laravel/elixir new api**
 
-## JSHInt
-This package doesn't use *JSHint*.
+## ESLint
+I prefer **ESLint** over *JSHint*.
 
 ## Usage
 > (Take it from [Hrcc Laravel Elixir Angular](https://github.com/HRcc/laravel-elixir-angular))
@@ -21,6 +21,7 @@ elixir(function(mix) {
    mix.angular();
 });
 ```
+
 This will scan your `resources/assets/angular` directory for all .js files. Generates *Sourcemaps*,  concatenates and minifies (if environment is set to production) the final script.
 
 Directory structure in `resources/assets/angular` is not forced, the only limitation is to provide at least one **\*.module.js** script with module initialization:
