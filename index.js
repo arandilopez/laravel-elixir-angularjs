@@ -22,8 +22,11 @@ Elixir.extend('angular', function (src, output, outputFilename) {
     .pipe(jshint())
     // .pipe(jshint.reporter(stylish))
     // .pipe(jshint.reporter('fail'))
+    .on('error', function (e) {
+      new Elixir.Notification().error(e, 'Angular compilation failed!');
+      this.emit('end');
+    })
     .pipe($.if(config.sourcemaps, $.sourcemaps.init()))
-    .on('error', new Elixir.Notification('Angular compilation failed!'))
     .pipe($.concat(outputFilename || 'application.js'))
     .pipe(ngAnnotate())
     .pipe($.if(config.production, $.uglify()))
