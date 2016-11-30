@@ -21,7 +21,7 @@ Elixir.extend('angular', function (src, output, outputFilename) {
     ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
-    .pipe(jshint.reporter('fail')).on('error', new Elixir.Notification('Angular compilation failed!'))
+    // .pipe(jshint.reporter('fail')).on('error', new Elixir.Notification('Angular compilation failed!'))
     .pipe($.if(config.sourcemaps, $.sourcemaps.init()))
     .pipe($.concat(outputFilename || 'application.js'))
     .pipe(ngAnnotate())
@@ -42,7 +42,7 @@ Elixir.extend('angularViews', function (src, output, outputFilename) {
     ])
     .pipe(html2js(outputFilename || 'views.js', {
       adapter: 'angular',
-      base: baseDir,
+      base: config.assetsPath,
       name: false
     }))
     .pipe(gulp.dest(output || config.get('public.js.outputFolder') + '/app/'))
