@@ -20,8 +20,8 @@ Elixir.extend('angular', function (src, output, outputFilename) {
       baseDir + '/**/*.js'
     ])
     .pipe(jshint())
-    .pipe(jshint.reporter(stylish))
-    // .pipe(jshint.reporter('fail')).on('error', new Elixir.Notification('Angular compilation failed!'))
+    // .pipe(jshint.reporter(stylish))
+    .pipe(jshint.reporter('fail')).on('error', new Elixir.Notification('Angular compilation failed!'))
     .pipe($.if(config.sourcemaps, $.sourcemaps.init()))
     .pipe($.concat(outputFilename || 'application.js'))
     .pipe(ngAnnotate())
