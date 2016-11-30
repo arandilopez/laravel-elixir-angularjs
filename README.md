@@ -4,9 +4,6 @@ Based on [Hrcc Laravel Elixir Angular](https://github.com/HRcc/laravel-elixir-an
 
 **This package is just an update of @Hrcc with laravel/elixir new api**
 
-## ESLint
-I prefer **ESLint** over *JSHint*.
-
 ## Usage
 > (Take it from [Hrcc Laravel Elixir Angular](https://github.com/HRcc/laravel-elixir-angular))
 
