@@ -19,16 +19,16 @@ Elixir.extend('angular', function (src, output, outputFilename) {
       baseDir + '/**/*.module.js',
       baseDir + '/**/*.js'
     ])
-    .pipe(jshint())
+    // .pipe(jshint())
     // .pipe(jshint.reporter(stylish))
     // .pipe(jshint.reporter('fail'))
+    .pipe($.if(config.sourcemaps, $.sourcemaps.init()))
+    .pipe($.concat(outputFilename || 'application.js'))
+    .pipe(ngAnnotate())
     .on('error', function (e) {
       new Elixir.Notification().error(e, 'Angular compilation failed!');
       this.emit('end');
     })
-    .pipe($.if(config.sourcemaps, $.sourcemaps.init()))
-    .pipe($.concat(outputFilename || 'application.js'))
-    .pipe(ngAnnotate())
     .pipe($.if(config.production, $.uglify()))
     .pipe($.if(config.sourcemaps, $.sourcemaps.write('.')))
     .pipe(gulp.dest(output || config.get('public.js.outputFolder') + '/app/'))
