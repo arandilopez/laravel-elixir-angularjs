@@ -2,8 +2,6 @@ var gulp = require('gulp');
 var Elixir = require('laravel-elixir');
 var ngAnnotate = require('gulp-ng-annotate');
 var html2js = require('gulp-html2js');
-var jshint = require('gulp-jshint');
-// var stylish = require('jshint-stylish');
 
 var Task = Elixir.Task;
 var $ = Elixir.Plugins;
@@ -19,9 +17,6 @@ Elixir.extend('angular', function (src, output, outputFilename) {
       baseDir + '/**/*.module.js',
       baseDir + '/**/*.js'
     ])
-    // .pipe(jshint())
-    // .pipe(jshint.reporter(stylish))
-    // .pipe(jshint.reporter('fail'))
     .pipe($.if(config.sourcemaps, $.sourcemaps.init()))
     .pipe($.concat(outputFilename || 'application.js'))
     .pipe(ngAnnotate())
